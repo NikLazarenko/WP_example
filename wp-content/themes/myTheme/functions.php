@@ -22,4 +22,5 @@
 	    $query->set('orderby','date');
 
 	}
+
 ?>

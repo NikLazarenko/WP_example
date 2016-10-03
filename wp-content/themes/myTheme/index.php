@@ -74,16 +74,12 @@
             </div>
         </div>
 
-		<?php if ( have_posts() ) : query_posts('cat=5');
-			while (have_posts()) : the_post(); ?>
-
 
 			<div class="container">
 	            <div class="row row--padding">
-	                <h3 class="portfolio__subtitle"><?php the_title(); ?></h3>
-	                <!-- <?php echo '<p class="portfolio__section-desc">'.the_content().'</p>' ?> -->
+	                <h3 class="portfolio__subtitle">BLACK & WHITE</h3>
 	                <div class="portfolio__section-desc">
-	                	<?php the_content(); ?>
+	                	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
 	                </div>
 	            </div>
 	        </div>
@@ -112,19 +108,14 @@
 	                </div>
 	            </div>
 	        </div>
-
-			
-		
-			<?php the_post_thumbnail(array(100, 100)); ?>
-
-		<?php endwhile; endif; wp_reset_query(); ?>
-
         
 
-        <!-- <div class="container">
+        <div class="container">
             <div class="row row--padding">
                 <h3 class="portfolio__subtitle">Black & White</h3>
-                <p class="portfolio__section-desc">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. </p>
+                <div class="portfolio__section-desc">
+                	<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                </div>
             </div>
         </div>
 
@@ -151,7 +142,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </section>
 
     <section class="blog" id="blog">
@@ -165,31 +156,23 @@
 
         <div class="container">
             <div class="row">
+				<div class="col-md-6 blog__item--padding">
+	                <figure class="blog__item">
+	                    <img src="<?php bloginfo('template_url')?>/img/blog1.jpg" alt="blog photo1">
+	                    <figcaption class="blog__item-caption">
+	                        <div class="blog__item-panel">
+	                            <div class="blog__item-info">21 may 2013 &nbsp; | &nbsp;  Macro, photography</div>
+	                            <div class="blog__item-likes">27 <i class="fa fa-heart" aria-hidden="true"></i></div>
+	                        </div>
+	                        <div class="blog__item-description">
+	                            <h3 class="blog__item-title">Tortor Ullamcorper Fringilla Cras Euismod</h3>
+	                            <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus  augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+	                        </div>
+	                    </figcaption>
+	                </figure>
+	            </div>
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					<div class="col-md-6 blog__item--padding">
-	                    <figure class="blog__item">
-	                        <img src="<?php bloginfo('template_url')?>/img/blog1.jpg" alt="blog photo1">
-	                        <figcaption class="blog__item-caption">
-	                            <div class="blog__item-panel">
-	                                <div class="blog__item-info">21 may 2013 &nbsp; | &nbsp;  Macro, photography</div>
-	                                <div class="blog__item-likes">27 <i class="fa fa-heart" aria-hidden="true"></i></div>
-	                            </div>
-	                            <div class="blog__item-description">
-	                                <h3 class="blog__item-title">Tortor Ullamcorper Fringilla Cras Euismod</h3>
-	                                <p>Donec id elit non mi porta gravida at eget metus. Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus  augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-	                            </div>
-	                        </figcaption>
-	                    </figure>
-	                </div>
-				<?php endwhile; ?>
-				<!-- post navigation -->
-				<?php else: ?>
-				<!-- no posts found -->
-				<?php endif; ?>
-
-                
-                <!-- <div class="col-md-6 blog__item--padding">
+                <div class="col-md-6 blog__item--padding">
                     <figure class="blog__item">
                         <img src="<?php bloginfo('template_url')?>/img/blog2.jpg"  alt="blog photo2">
                         <figcaption class="blog__item-caption">
@@ -233,7 +216,7 @@
                             </div>
                         </figcaption>
                     </figure>
-                </div> -->
+                </div>
             </div>
         </div>
     </section>
